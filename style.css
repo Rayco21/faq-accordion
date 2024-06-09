@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans";
+}
+
+main {
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  /* height: 100vh; */
+  padding: 8.5rem 2rem;
+
+  /* padding-inline: 2rem; */
+  max-width: 1440px;
+  margin: auto;
+}
+
+.faq-container {
+  margin: auto;
+  background-color: white;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 8px;
+}
+
+header {
+  display: flex;
+  color: hsl(292, 42%, 14%);
+  margin-bottom: 1.5rem;
+}
+
+header img {
+  width: 22px;
+  margin-right: 1.5rem;
+}
+
+.faq {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  margin-bottom: 1.25rem;
+}
+
+.faq:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.faq .answer {
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+}
+
+.answer {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.apply-transition {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.question:hover,
+.question:focus {
+  color: hsl(293, 76%, 51%);
+  outline: none;
+}
+
+@media (width > 375px) {
+  main {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    min-height: 100vh;
+  }
+
+  .faq-container {
+    max-width: 600px;
+
+    padding: 3rem 2.25rem 1.5rem 2.25rem;
+    border-radius: 8px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .faq .question {
+    font-size: 1.1rem;
+  }
+
+  .faq .answer {
+    font-size: 1rem;
+  }
+
+  .question:hover {
+    color: hsl(293, 76%, 51%);
+  }
+}
